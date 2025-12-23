@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Lara ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: radial-gradient(circle at top, #2a0f2f, #0d0614 70%);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.4rem;
+            color: #ff7ac6;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .message {
+            max-width: 90%;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            background: rgba(0, 0, 0, 0.45);
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 0 20px rgba(255, 122, 198, 0.3);
+        }
+
+        .memes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .meme {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .meme img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .reasons {
+            max-width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255, 122, 198, 0.4);
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .reasons h2 {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #ff9adf;
+        }
+
+        .reasons li {
+            margin-bottom: 8px;
+        }
+
+        button {
+            margin: 25px 0;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 40px;
+            background: #ff4fa3;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background: #ff1f85;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            font-size: 0.95rem;
+            padding: 25px;
+            color: #ccc;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 20px;
+            animation: floatUp linear infinite;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-110vh) translateX(30px);
+                opacity: 0;
+            }
+        }
+
+        /* Desktop tweaks */
+        @media (min-width: 768px) {
+            .memes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .message {
+                font-size: 1.3rem;
+            }
+
+            .reasons {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hey Lara 💖</h1>
+
+    <div class="message">
+        <p>You are deeply loved. You matter. And you make my world brighter.</p>
+        <p>I’m proud of you, I believe in you, and I love you endlessly 💕</p>
+    </div>
+
+    <div class="memes">
+        <div class="meme">
+            <img src="https://i.imgflip.com/30b1gx.jpg" onerror="this.style.display='none'">
+            <p>Me pretending I’m okay but then I remember Lara exists 😭❤️</p>
+        </div>
+        <div class="meme">
+            <img src="https://i.imgflip.com/4/1bij.jpg" onerror="this.style.display='none'">
+            <p>This dog is how happy I get when you smile 🐶</p>
+        </div>
+    </div>
+
+    <div class="reasons">
+        <h2>💗 Reasons Lara Is Amazing</h2>
+        <ul>
+            <li>You are kind and caring to everyone around you.</li>
+            <li>You make people feel safe just by being yourself.</li>
+            <li>You listen with your whole heart.</li>
+            <li>You are strong even when you feel tired.</li>
+            <li>You are beautiful inside and out.</li>
+            <li>You inspire me to be better.</li>
+            <li>You never give up even when things get hard.</li>
+            <li>You bring light into my life every day.</li>
+        </ul>
+    </div>
+
+    <button onclick="spawnHearts()">Tap for love 💖</button>
+
+    <div class="footer">
+        Made with love for Lara 💕
+    </div>
+
+    <script>
+        function spawnHearts() {
+            for (let i = 0; i < 12; i++) {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.innerText = "💗";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = 4 + Math.random() * 3 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 7000);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
